@@ -34,7 +34,7 @@ STRINGTABLE
                           / : < > |"
     IDS_PATHNOTEXISTING     "Пътят не съществува"
     IDS_FILENOTEXISTING     "Файлът не съществува"
-    IDS_INVALID_FOLDERNAME  "The selection contains a non-folder object"
+    IDS_INVALID_FOLDERNAME  "Избрали сте обект който не е папка"
 }
 
 STRINGTABLE
@@ -84,14 +84,14 @@ STRINGTABLE
     PD32_PRINTER_STATUS_OFFLINE           "Принтера изключен; "
     PD32_PRINTER_STATUS_IO_ACTIVE         "Вход/Изход активен; "
     PD32_PRINTER_STATUS_BUSY              "Зает; "
-    PD32_PRINTER_STATUS_PRINTING          "Печати; "
+    PD32_PRINTER_STATUS_PRINTING          "Печатане; "
     PD32_PRINTER_STATUS_OUTPUT_BIN_FULL   "Изходния контейнер е пълен; "
     PD32_PRINTER_STATUS_NOT_AVAILABLE     "Не е наличен; "
     PD32_PRINTER_STATUS_WAITING           "Изчакване; "
     PD32_PRINTER_STATUS_PROCESSING        "Обработка; "
     PD32_PRINTER_STATUS_INITIALIZING      "Подготовка; "
     PD32_PRINTER_STATUS_WARMING_UP        "Загряване; "
-    PD32_PRINTER_STATUS_TONER_LOW         "Тонера на привършване; "
+    PD32_PRINTER_STATUS_TONER_LOW         "Тонера свършва; "
     PD32_PRINTER_STATUS_NO_TONER          "Няма тонер; "
     PD32_PRINTER_STATUS_PAGE_PUNT         "Подаване на хартията; "
     PD32_PRINTER_STATUS_USER_INTERVENTION "Прекъснато от потребителя; "
@@ -104,27 +104,27 @@ STRINGTABLE
 STRINGTABLE /* Font styles */
 {
     IDS_FONT_REGULAR       "Regular"
-    IDS_FONT_BOLD          "Bold"
-    IDS_FONT_ITALIC        "Italic"
-    IDS_FONT_BOLD_ITALIC   "Bold Italic"
+    IDS_FONT_BOLD          "Одебелено"
+    IDS_FONT_ITALIC        "Наклонено"
+    IDS_FONT_BOLD_ITALIC   "Одебелено Наклонено"
 }
 
 STRINGTABLE /* Color names */
 {
     IDS_COLOR_BLACK     "Черно"
-    IDS_COLOR_MAROON    "Шатен"
+    IDS_COLOR_MAROON    "Тъмно-червен"
     IDS_COLOR_GREEN     "Зелен"
     IDS_COLOR_OLIVE     "Маслинен"
-    IDS_COLOR_NAVY      "Тъмносин"
-    IDS_COLOR_PURPLE    "Морав"
-    IDS_COLOR_TEAL      "Синьозелен"
+    IDS_COLOR_NAVY      "Тъмно-син"
+    IDS_COLOR_PURPLE    "Виолетов"
+    IDS_COLOR_TEAL      "Синьо-зелен"
     IDS_COLOR_GRAY      "Сив"
     IDS_COLOR_SILVER    "Сребърен"
     IDS_COLOR_RED       "Червен"
-    IDS_COLOR_LIME      "Жълтозелен"
+    IDS_COLOR_LIME      "Жълто-зелен"
     IDS_COLOR_YELLOW    "Жълт"
     IDS_COLOR_BLUE      "Син"
-    IDS_COLOR_FUCHSIA   "Пурпурен"
+    IDS_COLOR_FUCHSIA   "Светло-розов"
     IDS_COLOR_AQUA      "Аквамарин"
     IDS_COLOR_WHITE     "Бяло"
 }
@@ -132,13 +132,13 @@ STRINGTABLE /* Color names */
 STRINGTABLE
 {
     IDS_FONT_SIZE   "Изберете размер на шрифта между %d и %d пункта."
-    IDS_SAVE_BUTTON "&Съхрани"
-    IDS_SAVE_IN     "Съхрани &в:"
-    IDS_SAVE        "Съхрани"
-    IDS_SAVE_AS     "Съхрани като"
+    IDS_SAVE_BUTTON "&Запиши"
+    IDS_SAVE_IN     "Запиши &в:"
+    IDS_SAVE        "Запиши"
+    IDS_SAVE_AS     "Запиши като"
     IDS_OPEN_FILE   "Отвори файл"
-    IDS_SELECT_FOLDER "Select Folder"
-    IDS_FONT_SIZE_INPUT "Font size has to be a number."
+    IDS_SELECT_FOLDER "Избери папка"
+    IDS_FONT_SIZE_INPUT "Големината на шрифта е число."
 }
 
 /*
@@ -182,7 +182,7 @@ FONT 8, "MS Shell Dlg"
  COMBOBOX cmb1, 6, 114, 90, 60, CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_BORDER | WS_VSCROLL | WS_TABSTOP
  LTEXT "&Устройства:", stc4, 110, 104, 92, 9
  COMBOBOX cmb2, 110, 114, 92, 68, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_BORDER | WS_VSCROLL | WS_TABSTOP
- DEFPUSHBUTTON "Съхрани като", IDOK, 208, 6, 60, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
+ DEFPUSHBUTTON "Запиши като", IDOK, 208, 6, 60, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
  PUSHBUTTON "Отмени", IDCANCEL, 208, 24, 60, 14, WS_GROUP | WS_TABSTOP
  PUSHBUTTON "&Помощ", pshHelp, 208, 46, 60, 14, WS_GROUP | WS_TABSTOP
  CHECKBOX "Само за &четене", chx1, 208, 68, 65, 12, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
@@ -208,7 +208,7 @@ FONT 8, "MS Shell Dlg"
  LTEXT "&Качество:", stc5, 6, 100, 76, 9
  COMBOBOX cmb1, 80, 100, 92, 68, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_BORDER | WS_VSCROLL | WS_TABSTOP
  CHECKBOX "Печат във &файл", chx1, 20, 120, 50, 12, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
- CHECKBOX "Сгъстено", chx2, 160, 120, 50, 12, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
+ CHECKBOX "Уплътнено", chx2, 160, 120, 50, 12, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
 }
 
 
@@ -222,7 +222,7 @@ FONT 8, "MS Shell Dlg"
  LTEXT "[няма]", stc1, 35, 30, 120, 9
  RADIOBUTTON "Друг &принтер", rad2, 16, 44, 150, 12
  COMBOBOX cmb1, 35, 58, 145, 68, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_BORDER | WS_VSCROLL | WS_TABSTOP
- DEFPUSHBUTTON "OK", IDOK, 206, 6, 56, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
+ DEFPUSHBUTTON "Добре", IDOK, 206, 6, 56, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
  PUSHBUTTON "Отмени", IDCANCEL, 206, 24, 56, 14, WS_GROUP | WS_TABSTOP
  PUSHBUTTON "&Настройки", psh1, 206, 46, 56, 14, WS_GROUP | WS_TABSTOP
  GROUPBOX "Ориентация", grp2, 6, 82, 100, 50, BS_GROUPBOX
@@ -252,12 +252,12 @@ FONT 8, "MS Shell Dlg"
     LTEXT           "Размер:",stc3,179,3,32,9
     COMBOBOX        cmb3,179,13,32,76, CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | CBS_DISABLENOSCROLL |
                     WS_VSCROLL | WS_TABSTOP | CBS_SIMPLE | CBS_SORT
-    DEFPUSHBUTTON   "OK",IDOK,218,6,50,14, WS_GROUP | WS_TABSTOP | BS_DEFPUSHBUTTON
+    DEFPUSHBUTTON   "Добре",IDOK,218,6,50,14, WS_GROUP | WS_TABSTOP | BS_DEFPUSHBUTTON
     PUSHBUTTON      "Отмени",IDCANCEL,218,23,50,14,WS_GROUP | WS_TABSTOP
     PUSHBUTTON      "&Потвърди", psh3,218,40,50,14,WS_GROUP | WS_TABSTOP
     PUSHBUTTON      "&Помощ" , pshHelp,218,57,50,14,WS_GROUP | WS_TABSTOP
     GROUPBOX        "Ефекти",grp1,6,92,84,36,WS_GROUP
-    CHECKBOX	    "&Зачертан", chx1, 10,102,78,10, BS_AUTOCHECKBOX | WS_TABSTOP
+    CHECKBOX	    "&Зачеркнат", chx1, 10,102,78,10, BS_AUTOCHECKBOX | WS_TABSTOP
     CHECKBOX 	    "Под&чертан", chx2, 10,114,78,10, BS_AUTOCHECKBOX
     LTEXT           "Цвят:", stc4 ,6,134,80,9
     COMBOBOX        cmb4,6,144,84,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS |
@@ -299,7 +299,7 @@ FONT 8, "MS Shell Dlg"
  PUSHBUTTON "Отмени", IDCANCEL, 58, 167, 50, 14, WS_GROUP | WS_TABSTOP
  PUSHBUTTON "Помощ", pshHelp,100,166, 44, 14
  PUSHBUTTON "&Добави потребителски цвят",    IDC_COLOR_ADD /*1024*/, 152, 167, 144, 14, WS_GROUP | WS_TABSTOP
- PUSHBUTTON "&Определи цветове >>", IDC_COLOR_DEFINE /*1025*/,   4, 149, 142, 14, WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "&Определи цветовете >>", IDC_COLOR_DEFINE /*1025*/,   4, 149, 142, 14, WS_GROUP | WS_TABSTOP
  PUSHBUTTON "Цвят|&Плътен", IDC_COLOR_RES, 300,200,4,14   /* just a dummy */
 }
 
@@ -312,7 +312,7 @@ FONT 8, "MS Shell Dlg"
  LTEXT "Търси &за:", -1, 4, 8, 52, 8
  EDITTEXT edt1, 57, 7, 148, 12, ES_AUTOHSCROLL | WS_BORDER | WS_GROUP | WS_TABSTOP
  CHECKBOX "&Само цели думи", chx1, 4, 26, 140, 12, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
- CHECKBOX "&Чувствителен регистър", chx2, 4, 42, 140, 12, BS_AUTOCHECKBOX | WS_TABSTOP
+ CHECKBOX "&Различава големи и малки букви", chx2, 4, 42, 140, 12, BS_AUTOCHECKBOX | WS_TABSTOP
  GROUPBOX "Посока", grp1, 147, 21, 58, 38
  CONTROL "На&горе", rad1, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 151, 30, 48, 12
  CONTROL "На&долу", rad2, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 151, 44, 48, 12
@@ -349,7 +349,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 CAPTION "Печат"
 FONT 8, "MS Shell Dlg"
 {
-    DEFPUSHBUTTON   "OK",     IDOK,     176,164, 50,14, WS_GROUP | BS_DEFPUSHBUTTON
+    DEFPUSHBUTTON   "Добре",     IDOK,     176,164, 50,14, WS_GROUP | BS_DEFPUSHBUTTON
     PUSHBUTTON      "Отмени", IDCANCEL, 230,164, 50,14, WS_GROUP
     PUSHBUTTON      "&Помощ",  pshHelp,  50, 161, 50,14, WS_GROUP
 
@@ -388,7 +388,7 @@ STYLE DS_SHELLFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYS
 CAPTION "Настройки на печатането"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,176,156,50,14,WS_GROUP
+    DEFPUSHBUTTON   "Добре",IDOK,176,156,50,14,WS_GROUP
     PUSHBUTTON      "Отмени",IDCANCEL,230,156,50,14
 /*    PUSHBUTTON      "Network...", psh5, 284,156,48,14 */
 
@@ -406,7 +406,7 @@ BEGIN
     LTEXT           "",               stc13, 65, 72, 212,10, SS_NOPREFIX | SS_LEFTNOWORDWRAP
 
     GROUPBOX        "Хартия",          grp2,   8, 92, 164,56, WS_GROUP
-    LTEXT           "Size:",         stc2,  16,108,  36, 8
+    LTEXT           "Големина:",         stc2,  16,108,  36, 8
     COMBOBOX                          cmb2,  52,106, 112,112,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
     LTEXT           "&Източник:",       stc3,  16,128,  36, 8
     COMBOBOX                          cmb3,  52,126, 112,112,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
@@ -440,9 +440,9 @@ BEGIN
   EDITTEXT edt6, 190, 170, 36, 12, WS_TABSTOP|WS_GROUP|WS_BORDER
   LTEXT "&Горна:", stc17, 88, 192, 30, 8
   EDITTEXT edt5, 119, 190, 36, 12, WS_TABSTOP|WS_GROUP|WS_BORDER
-  LTEXT "Ля&ва:", stc18, 159, 192, 30, 8
+  LTEXT "До&лна:", stc18, 159, 192, 30, 8
   EDITTEXT edt7, 190, 190, 36, 12, WS_TABSTOP|WS_GROUP|WS_BORDER
-  DEFPUSHBUTTON "OK", IDOK, 70, 220, 50, 14, BS_PUSHBUTTON
+  DEFPUSHBUTTON "Добре", IDOK, 70, 220, 50, 14, BS_PUSHBUTTON
   PUSHBUTTON "Отмени", IDCANCEL, 126, 220, 50, 14
   PUSHBUTTON "&Принтер...", psh3, 182, 220, 50, 14
 END
@@ -474,28 +474,28 @@ FONT 8, "MS Shell Dlg"
 
 NEWFILEOPENV2ORD DIALOG 0, 0, 370, 237
 STYLE DS_MODALFRAME | WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_CLIPCHILDREN
-CAPTION "Open"
+CAPTION "Отвори"
 FONT 8, "MS Shell Dlg"
 {
-    LTEXT "Look &in:", IDC_LOOKINSTATIC, 28, 6, 43, 8, SS_NOTIFY
+    LTEXT "Преглед &в:", IDC_LOOKINSTATIC, 28, 6, 43, 8, SS_NOTIFY
     COMBOBOX IDC_LOOKIN, 64, 3, 150, 100, CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
 
     LTEXT "" , IDC_TOOLBARSTATIC, 209, 2, 102, 17, NOT WS_GROUP | NOT WS_VISIBLE
     CONTROL "", IDC_TOOLBARPLACES, "ToolbarWindow32", 0x800 | CCS_NORESIZE | CCS_TOP | CCS_NOPARENTALIGN | CCS_NODIVIDER, 4, 20, 55, 208
     LISTBOX IDC_SHELLSTATIC, 64, 20, 300, 155, LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | WS_HSCROLL | NOT WS_VISIBLE
 
-    LTEXT "File &name:", IDC_FILENAMESTATIC, 65, 182, 56, 16, SS_NOTIFY
+    LTEXT "&Име на файла:", IDC_FILENAMESTATIC, 65, 182, 56, 16, SS_NOTIFY
     EDITTEXT IDC_FILENAME, 123, 180, 180, 12, ES_AUTOHSCROLL
     CONTROL "", cmb13, "ComboBoxEx32", CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP, 123, 180, 180, 150
 
-    LTEXT "Files of &type:", IDC_FILETYPESTATIC, 65, 200, 56, 16, SS_NOTIFY
+    LTEXT "&Тип на файла:", IDC_FILETYPESTATIC, 65, 200, 56, 16, SS_NOTIFY
     COMBOBOX IDC_FILETYPE, 123, 198, 180, 53, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
 
-    CONTROL "Open as &read-only", IDC_OPENREADONLY, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 123, 218, 150, 10
+    CONTROL "Отвори &само за четене", IDC_OPENREADONLY, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 123, 218, 150, 10
 
-    DEFPUSHBUTTON "&Open", IDOK, 310, 180, 54, 14
-    PUSHBUTTON "Cancel", IDCANCEL, 310, 198, 54, 14
-    PUSHBUTTON "&Help", pshHelp, 310, 215, 54, 14
+    DEFPUSHBUTTON "&Отвори", IDOK, 310, 180, 54, 14
+    PUSHBUTTON "Отказ", IDCANCEL, 310, 198, 54, 14
+    PUSHBUTTON "&Помощ", pshHelp, 310, 215, 54, 14
 }
 
 NEWFILEOPENV3ORD DIALOG 0, 0, 440, 300
